@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Candidate - Voting System</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Voting System</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin.html">Admin Dashboard</a></li>
+                <li><a href="add-candidate.html" aria-current="page">Add Candidate</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="admin-container">
+                <h2>Add New Candidate</h2>
+                
+                <form id="add-candidate-form" class="candidate-form">
+                    <div class="form-group">
+                        <label for="candidate-name">Full Name</label>
+                        <input type="text" id="candidate-name" name="candidate-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="candidate-position">Position</label>
+                        <select id="candidate-position" name="candidate-position" required>
+                            <option value="">Select Position</option>
+                            <option value="president">President</option>
+                            <option value="vice-president">Vice President</option>
+                            <option value="secretary">Secretary</option>
+                            <option value="treasurer">Treasurer</option>
+                            <option value="auditor">Auditor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="candidate-party">Party/Affiliation</label>
+                        <input type="text" id="candidate-party" name="candidate-party" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="candidate-bio">Biography</label>
+                        <textarea id="candidate-bio" name="candidate-bio" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="candidate-image">Profile Image</label>
+                        <input type="file" id="candidate-image" name="candidate-image" accept="image/*" required>
+                        <div id="image-preview" class="image-preview"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="primary-btn">Add Candidate</button>
+                    </div>
+                </form>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+                <div id="success-message" class="success-message" style="display: none;"></div>
+            </div>
+
+            <!-- List of existing candidates -->
+            <div class="candidates-list">
+                <h3>Existing Candidates</h3>
+                <div id="candidates-grid" class="candidates-grid">
+                    <!-- Candidates will be loaded here dynamically -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Voting System. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="scripts/add-candidate.js"></script>
+</body>
+</html> 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Voting System</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>Admin Dashboard</h1>
+            <nav class="admin-nav">
+                <button id="manage-voters">Manage Voters</button>
+                <button id="manage-candidates">Manage Candidates</button>
+                <button id="view-results">View Results</button>
+                <button id="logout">Logout</button>
+            </nav>
+        </header>
+
+        <main class="admin-content">
+            <section id="dashboard-stats">
+                <h2>Dashboard Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Voters</h3>
+                        <p id="total-voters">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Candidates</h3>
+                        <p id="total-candidates">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Votes Cast</h3>
+                        <p id="votes-cast">0</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="recent-activity">
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <!-- Activity items will be added dynamically -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="error-message" class="error-message" style="display: none;"></div>
+    <div id="success-message" class="success-message" style="display: none;"></div>
+    <div id="loading-indicator" class="spinner"></div>
+
+    <footer>
+        <p>&copy; 2024 Voting System. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="scripts/admin.js"></script>
+    <script>
+        // Basic admin functionality
+        document.getElementById('logout').addEventListener('click', function() {
+            if(confirm('Are you sure you want to logout?')) {
+                window.location.href = 'login.html';
+            }
+        });
+
+        // Placeholder for other admin functions
+        document.getElementById('manage-voters').addEventListener('click', function() {
+            alert('Manage Voters functionality will be implemented here');
+        });
+
+        document.getElementById('manage-candidates').addEventListener('click', function() {
+            alert('Manage Candidates functionality will be implemented here');
+        });
+
+        document.getElementById('view-results').addEventListener('click', function() {
+            alert('View Results functionality will be implemented here');
+        });
+    </script>
+</body>
+</html> 

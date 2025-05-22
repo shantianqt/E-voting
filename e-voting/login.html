@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Voting System</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <select id="role" name="role" required>
+                    <option value="">Select Role</option>
+                    <option value="voter">Voter</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="remember-me" name="remember-me">
+                    Remember me
+                </label>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="login-button">Login</button>
+            </div>
+        </form>
+        <div class="form-footer">
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+        <div id="error-message" style="display:none;color:red;"></div>
+        <div id="success-message" style="display:none;color:green;">Login successful! Redirecting to voter interface...</div>
+    </div>
+
+    <script type="module" src="scripts/login.js"></script>
+</body>
+</html> 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Dashboard - Voting System</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="candidate-container">
+       
+        
+        <main>
+            <section class="candidate-profile">
+                <h2>My Profile</h2>
+                <div class="profile-info">
+                    <div id="candidate-details">
+                        <!-- Profile details will be loaded here -->
+                    </div>
+                    <button id="edit-profile">Edit Profile</button>
+                </div>
+            </section>
+
+            <section class="candidate-stats">
+                <h2>Voting Statistics</h2>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>Total Votes</h3>
+                        <p id="total-votes">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Vote Percentage</h3>
+                        <p id="vote-percentage">0%</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="scripts/candidate.js"></script>
+</body>
+</html> 
